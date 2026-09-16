@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "server.py", line 197, in do_POST
+    raise Exception("API 응답이 없습니다. 인터넷 연결이나 API 키 권한을 확인하세요.")
+Exception: API 응답이 없습니다. 인터넷 연결이나 API 키 권한을 확인하세요.

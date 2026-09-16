@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>팩트 폭격기 — Queen Never Cry</title>
+  <meta name="description" content="감정은 없다. 팩트만 있다. 냉철한 논리로 네 고민을 해부하는 팩트 폭격기 챗봇." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ───────────────── SKIP BUTTON ───────────────── -->
+  <button id="intro-skip" class="intro-skip">SKIP</button>
+
+
+  <!-- ───────────────── INTRO: PHASE 1 — Photo ───────────────── -->
+  <div id="intro-photo" class="intro-screen">
+    <img src="퀸 네버 크라이.webp" alt="Queen" id="queen-photo" />
+    <div class="photo-vignette"></div>
+  </div>
+
+  <!-- ───────────────── INTRO: PHASE 2 — Tagline ───────────────── -->
+  <div id="intro-text" class="intro-screen hidden">
+    <p class="tagline" id="tagline-text">Queen never cry</p>
+  </div>
+
+  <!-- ───────────────── MAIN APP ───────────────── -->
+  <div id="app" class="hidden">
+
+
+
+    <!-- Header -->
+    <header class="app-header">
+      <span class="header-logo">FACT BOMBER</span>
+      <button id="reset-btn" class="reset-btn" title="처음으로">↺</button>
+    </header>
+
+    <!-- ─── PHASE A: Category Screen ─── -->
+    <section id="category-screen" class="screen">
+      <div class="category-hero">
+        <p class="category-pre">냉철한 분석 시작</p>
+        <h1 class="category-title">고민이 뭐야?</h1>
+        <p class="category-sub">카테고리를 선택하면 바로 시작해.</p>
+      </div>
+
+      <div class="category-grid" id="category-grid">
+        <button class="cat-btn" data-cat="진로와 미래" id="cat-1">
+          <span class="cat-icon">🧭</span>
+          <span class="cat-label">진로와 미래</span>
+        </button>
+        <button class="cat-btn" data-cat="학업 및 성적 스트레스" id="cat-2">
+          <span class="cat-icon">📚</span>
+          <span class="cat-label">학업 및 성적 스트레스</span>
+        </button>
+        <button class="cat-btn" data-cat="외모와 자기 이미지" id="cat-3">
+          <span class="cat-icon">🪞</span>
+          <span class="cat-label">외모와 자기 이미지</span>
+        </button>
+        <button class="cat-btn" data-cat="친구 관계" id="cat-4">
+          <span class="cat-icon">🤝</span>
+          <span class="cat-label">친구 관계</span>
+        </button>
+        <button class="cat-btn" data-cat="이성 관계 및 연애" id="cat-5">
+          <span class="cat-icon">💔</span>
+          <span class="cat-label">이성 관계 및 연애</span>
+        </button>
+        <button class="cat-btn" data-cat="가족과의 갈등" id="cat-6">
+          <span class="cat-icon">🏠</span>
+          <span class="cat-label">가족과의 갈등</span>
+        </button>
+        <button class="cat-btn" data-cat="자존감과 정체성" id="cat-7">
+          <span class="cat-icon">🧠</span>
+          <span class="cat-label">자존감과 정체성</span>
+        </button>
+        <button class="cat-btn" data-cat="정신 건강 문제" id="cat-8">
+          <span class="cat-icon">🌀</span>
+          <span class="cat-label">정신 건강 문제</span>
+        </button>
+        <button class="cat-btn" data-cat="기타" id="cat-9">
+          <span class="cat-icon">💭</span>
+          <span class="cat-label">기타</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ─── PHASE B: Chat Screen ─── -->
+    <section id="chat-screen" class="screen hidden">
+      <div class="chat-header">
+        <div class="chat-header-left">
+          <div class="bot-avatar">FB</div>
+          <div>
+            <p class="bot-name">팩트 폭격기</p>
+            <p class="chat-category-badge" id="chat-category-badge">—</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-messages" id="chat-messages">
+        <!-- messages rendered by JS -->
+      </div>
+
+      <div class="chat-input-area">
+        <textarea id="user-input" class="chat-textarea" placeholder="고민을 솔직하게 털어놔봐..." rows="1" disabled></textarea>
+        <button id="send-btn" class="send-btn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
